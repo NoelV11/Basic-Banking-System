@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
+    <title>Transaction History Page</title>
+<style type="text/css">
+body    
+{
+background-image:url(Other/qwd83nc4xxf41.jpg);
+background-position:right-top;
+}
+</style>
+    <link rel="stylesheet" href="assets/css/customer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- navbar starts here -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html">The Citizen's Bank</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav navbar-nav navbar-right ml-auto">
+          <li>
+            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Transaction.html">Transfer Money</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>    
+
+  <!-- navbar ends here  -->
+    <div class="tm-container">
+        <div>
+            <br>
+            <!--table-->
+            <center>
+            <div class="container">
+                    <h2>History of recent transactions</h2>
+                    <table id="myTable" class="table table-hover table-bordered">
+                        <thead>
+                            <tr class="table-danger">
+                                <th scope="col">Transfer From</th>
+                                <th scope="col">Transfer To</th>
+                                <th scope="col">Amount Transfered(Rs)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-light">
+                                <td>Reece</td>
+                                <td>Jack</td>
+                                <td><p id="Balance">5000</p></td>
+                            </tr>
+                            <tr class="table-info">
+                                <td>Harry</td>
+                                <td>Trent</td>
+                                <td><p id="Balance">2000</p></td>
+                            </tr>
+                            <tr class="table-light">
+                                <td>Kieran</td>
+                                <td>Kalvin</td>
+                                <td><p id="Balance">510</p></td>
+                            </tr>
+                            <tr class="table-info">
+                                <td>Luke</td>
+                                <td>Adam</td>
+                                <td><p id="Balance">6550</p></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                </center>
+                <br>
+                <br>
+                <br>
+    <!-- Footer -->
+                <br>
+                <br>
+            <center>
+  <footer class="bg-light text-center text-lg-start">
+    <!-- Grid container -->
+    
+    <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(214,230,255)">
+
+      <p class="love">Made with <img src="Other/25616629.jpg">by Noel</p>
+     <iframe src="https://free.timeanddate.com/clock/i7u7f40p/n5434/fn6/fs16/fcfff/tc000/ftb/bas2/bat1/bacfff/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="216" height="58"></iframe>
+      </div>
+       
+    <!-- Copyright -->
+  </footer>
+</center>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+</body>
+</html>

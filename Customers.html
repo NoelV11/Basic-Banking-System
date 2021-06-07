@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Page</title>
+    <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="assets/css/customer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<style type="text/css">
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+    margin-left:0px;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+    margin-left:0px;
+}    
+</style>
+<body>
+
+     <!--Navbar Starts Here-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html">The Citizen's Bank</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav navbar-nav navbar-right ml-auto">
+          <li>
+            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Transaction.html">Transfer Money</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar ends here  -->
+ 
+    
+    <div class="my-info text-center">
+        <h2><center><b>Current Account Holder Details</b></center></h2>
+        <h2>Name : Noel</h2>
+        <h2>Account Number: 120139</h2>
+        <h4>Net Bank Balance: Rs.<span id="myAccountBalance">100000</span></h4>
+
+        <center>
+        <button class="btn btn-primary btn-info btn-lg" onclick=
+"location.href='History.html';" data-toggle="modal">Transaction History</button>
+        </center>
+            </div>
+    <h3><center>Registered Citizen's Bank Account Holders</center></h3>
+    <!-- Modal send money -->
+    <div class="modal fade" id="sendMoney" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Send Money</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="input-group mb-3">
+                            <input type="text" id="enterName" class="form-control" placeholder="Recipient's username"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2">@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Rs.</span>
+                            </div>
+                            <input type="text" id="enterAmount" class="form-control" placeholder=" Enter Amount"
+                                aria-label="Amount (to the nearest dollar)">
+                            <div class="input-group-append">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" onclick="SendMoney()" class="btn btn-success" data-dismiss="modal">Send
+                        Money</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal send money ends here-->
+
+    
+    <!-- Modal transaction History-->
+    <div class="modal fade" id="transactionHistory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Transaction History</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ol id="transaction-history-body">
+
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- table  -->
+    <div class="container">
+        <div class="table-responsive">
+
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr class="table-info">
+                        <th scope="col">Sl. No.</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Bank Balance(in ₹)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-light">
+                        <td scope="row">1</td>
+                        <td>Adam</td>
+                        <td>Adam@gmail.com</td>
+                        <td>32850</td>
+                    </tr>
+                    <tr class="table-secondary">
+                        <td scope="row">2</td>
+                        <td>Dean</td>
+                        <td>Dean@gmail.com</td>
+                        <td>75000
+                        </td>
+                    </tr>
+                    <tr class="table-light">
+                        <td scope="row">3</td>
+                        <td>Harry</td>
+                        <td>Harry@gmail.com</td>
+                        <td>1000</td>        
+                    </tr>
+                    <tr class="table-secondary">
+                        <td scope="row">4</td>
+                        <td>Jack</td>
+                        <td>Jack@gmail.com</td>
+                        <td>5500</td>
+                    </tr>
+                    <tr class="table-light">
+                        <td scope="row">5</td>
+                        <td>Luke</td>
+                        <td>Luke@gmail.com</td>
+                        <td>80000</td>
+                    </tr>
+                       <tr class="table-secondary">
+                        <td scope="row">6</td>
+                        <td>Kieran</td>
+                        <td>Kieran@gmail.com</td>
+                        <td>6110</td>
+                    </tr>
+                       <tr class="table-light">
+                        <td scope="row">7</td>
+                        <td>Kalvin</td>
+                        <td>Kalvin@gmail.com</td>
+                        <td>79550</td>
+                    </tr>
+                    <tr class="table-secondary">
+                        <td scope="row">8</td>
+                        <td>Marcus</td>
+                        <td>Marcus@gmail.com</td>
+                        <td>28750</td>
+                    </tr>
+                    <tr class="table-light">
+                        <td>9</td>
+                        <td>Reece</td>
+                        <td>Reece@gmail.com</td>
+                        <td>7000</td>
+                    </tr>
+                    <tr class="table-secondary">
+                        <td scope="row">10</td>
+                        <td>Trent</td>
+                        <td>Trent@gmail.com</td>
+                        <td>5000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Footer -->
+  
+    <script src="assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Grid container -->
+        
+        <!-- Copyright -->
+              <div class="text-center p-3" style="background-color: rgba(214,230,255)" >
+      Made with<img src="Other/25616629.jpg"> by Noel
+                  <br>
+                  <br>
+                   <iframe src="https://free.timeanddate.com/clock/i7u7f40p/n5434/fn6/fs16/fcfff/tc000/ftb/bas2/bat1/bacfff/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="216" height="58"></iframe>
+                  <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <center><b><h2>Reach us on social media</h2></b></center>
+        <center>
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/MyIndianBank/" class="fa fa-facebook "></a>
+<a href="https://twitter.com/MyIndianBank?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="fa fa-twitter"></a>    
+        </center>
+        </div>
+        <!-- Copyright -->
+      </footer>
+</body>
+
+</html>
