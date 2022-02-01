@@ -12,7 +12,7 @@ View Transaction Records and
 
 View Customer Information
 
-### Tech Stack Used
+## Tech Stack Used
 It is powered using the following:-
 - Bootstrap
 - CSS
