@@ -1,6 +1,6 @@
 # Basic-Banking-System
 
-	/github/search/:NoelV11/:Basic-Banking-System/:query
+https://img.shields.io/badge/HTML-80.5-brightgreen
 
 This project mimics the functionality offered by any normal banking website, allowing a account holder, to:-
 
