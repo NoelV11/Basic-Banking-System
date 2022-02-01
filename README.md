@@ -1,6 +1,8 @@
 # Basic-Banking-System
 
-https://img.shields.io/badge/HTML-80.5-brightgreen
+![GitHub top language](https://img.shields.io/github/languages/top/NoelV11/Basic-Banking-System)
+![Lines of code](https://img.shields.io/tokei/lines/github/NoelV11/Basic-Banking-System)
+
 
 This project mimics the functionality offered by any normal banking website, allowing a account holder, to:-
 
